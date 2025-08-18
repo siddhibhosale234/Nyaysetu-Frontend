@@ -14,8 +14,9 @@ export function ChatRoom({ roomId, userId }) {
 
     useEffect(() => {
         // ✅ Connect only once
-        socketRef.current = io(process.env.REACT_APP_SOCKET_URL, {
+        socketRef.current = io(import.meta.env.VITE_SOCKET_URL, {
             transports: ["websocket", "polling"], 
+            withCredentials: true,
         });
 
         socketRef.current.emit('joinRoom', { roomId, userId });
