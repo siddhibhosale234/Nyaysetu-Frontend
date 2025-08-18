@@ -33,7 +33,7 @@ function HomeProp() {
       Title: "Reminders",
       Short_Info: "Set Reminders that will remind you with important dates.",
       onClick : ()=>{
-        navigate('/reminders')
+        navigate('/reminders?role=lawyer')
       }
     },
     {
