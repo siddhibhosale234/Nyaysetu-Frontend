@@ -46,6 +46,7 @@ export function Login(){
     }
 
     if (role === "lawyer") {
+      console.log("API URL:", process.env.REACT_APP_API_URL);
       const details = await baseBookURL.get("/lawyerAccount/getLawyers");
       const user = details.data.lawyerDataList.find(
         (val) => val.Email === username && val.Password === password
