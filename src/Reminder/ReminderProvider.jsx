@@ -31,6 +31,10 @@ export const ReminderProvider = ({ children }) => {
   };
 
   const fetchReminders = async () => {
+     if (!id) {
+    console.warn("⚠️ No user ID found in localStorage, skipping reminders fetch.");
+    return;
+  }
     try {
       const res = await baseBookURL.get(`reminders/fetch/${id}`);
       if (Array.isArray(res.data)) {
