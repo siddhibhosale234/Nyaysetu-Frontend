@@ -1,0 +1,8 @@
+.container3{
+    display: flex;
+    width: 100vw;
+    gap: 5%;
+    overflow-x: hidden;
+    padding-top: 3%;
+    padding-bottom: 5%;
+}

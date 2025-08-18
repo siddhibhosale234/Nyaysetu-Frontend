@@ -1,0 +1,50 @@
+.lawyer-specializations {
+  padding: 2rem;
+  background: linear-gradient(to right, #e0f7fa, #ffffff);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin: 2rem auto;
+  max-width: 1000px;
+}
+
+.lawyer-specializations h2 {
+  font-size: 2rem;
+  color: #15495f;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.profile-card img{
+  height: 20%;
+  width: 20;
+}
+
+.specialization-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.profile-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  border-radius: 30px;
+  width: 200px;
+  padding: 1rem;
+  text-align: center;
+  color: #15495f;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 188, 212, 0.4);
+}
+
+.profile-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+}

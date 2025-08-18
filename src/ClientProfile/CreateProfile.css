@@ -1,0 +1,46 @@
+/* CreateProfile.css */
+.body2{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  background-image: url('../LawyerCaseHandling/background.jpeg');
+  overflow: hidden;
+}
+.create-container {
+  max-width: 600px;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  height: 80%;
+  overflow-y: scroll;
+}
+
+.create-container h2 {
+  text-align: center;
+  color: #800020;
+}
+
+.create-profile label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.create-profile input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.error-text {
+  color: red;
+  font-size: 13px;
+  margin-top: 4px;
+}

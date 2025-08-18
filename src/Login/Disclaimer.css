@@ -1,0 +1,155 @@
+.body4{
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../LawyerCaseHandling/background.jpeg');
+}
+.disclaimer-container {
+  position: fixed;        /* Keep it fixed relative to viewport */
+  top: 50%;               /* Center vertically */
+  left: 50%;              /* Center horizontally */
+  transform: translate(-50%, -50%);  /* Perfect center */
+  z-index: 1000;
+  height: 400px;
+  max-width: 760px;
+  padding: 30px 32px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: none;
+  font-family: 'Inter', 'Poppins', 'Segoe UI', sans-serif;
+  animation: fadeSlide 1s ease-out;
+
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+
+
+/* Animations */
+@keyframes fadeSlide {
+  0% { opacity: 0; transform: translate(-50%, 30%); }
+  100% { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+
+/* Header */
+.disclaimer-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #4f46e5;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  /* animation: floatIn 1.8s; */
+  /* animation: blink 1.2s linear infinite, fadeIn 1.2s; */
+}
+
+/* Icon Header */
+.icon-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  animation: floatIn 1.8s;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.warning-icon {
+  color: #151226;
+  font-size: 36px;
+  filter: drop-shadow(0 0 6px #ffc107);
+   transition: all 0.3s ease-in-out;
+    filter: drop-shadow(0 0 8px #d18e29);
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+}
+/* @keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+} */
+
+.disclaimer-heading {
+  font-size: 1.6rem;
+  color: #4f46e5;
+  font-weight: 700;
+  text-shadow: 0 0 6px #fff3e0;
+  animation: blink 1.2s linear infinite, fadeIn 1.2s;
+}
+
+/* Content */
+.content-section {
+  background: #f3f4f6;
+  border-left: 4px solid #6366f1;
+  padding: 18px 22px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  line-height: 1.65;
+  font-size: 1.05rem;
+  color: #0e0e0e;
+  box-shadow: 0 2px 12px rgba(255, 193, 7, 0.15);
+  animation: floatIn 1.8s;
+}
+@keyframes floatIn {
+    from { opacity: 0; transform: translateY(40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+.content-section p {
+  margin-top: 10px;
+}
+
+/* Close Icon */
+.close-icon {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  color: #888;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.close-icon:hover {
+  color: #ef4444; /* Tailwind red-500 */
+  transform: scale(1.2);
+}
+
+/* Checkbox */
+.checkbox-row {
+  display: flex;
+  align-items: left;
+  margin-top: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-right: 50%;
+}
+.checkbox-row label{
+  margin-top: 1%;
+  margin-right: 10%;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #4f46e5;
+  border-radius: 6px;
+}
+.proceed-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4f46e5;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.proceed-btn:hover {
+  background-color: #4338ca;
+}
+

@@ -1,0 +1,112 @@
+.about-body{
+  height: 120vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #bbcad9;
+}
+.about-container {
+  height: 105vh;
+  width: 80vw;
+  margin: 3rem auto;
+  padding: 2rem 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fefefe;
+   background: rgba(5, 30, 66, 0.6); 
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(5, 30, 66, 0.15);
+  backdrop-filter: blur(20px);
+}
+
+.about-heading {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: #fafbfc;
+  position: relative;
+}
+
+.about-heading::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #021446;
+  margin: 0.5rem auto 0;
+  border-radius: 3px;
+  opacity: 0.8;
+  transition: width 0.3s ease;
+}
+.about-section {
+  margin-bottom: 2.5rem;
+  opacity: 0; /* or in .slide-in */
+  /* common padding maybe */
+}
+
+.about-sectionr {
+  border-left: 5px solid #021446;
+  padding-left: 12px;
+}
+
+.about-sectionl {
+  border-right: 5px solid #021446;
+  padding-right: 12px;
+}
+
+/* Slide-in base */
+.slide-in {
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+}
+
+/* Slide from left */
+.from-left {
+  transform: translateX(-50px);
+  animation-name: slideInFromLeft;
+}
+
+/* Slide from right */
+.from-right {
+  transform: translateX(50px);
+  animation-name: slideInFromRight;
+}
+
+.about-sectionl h2 ,
+.about-sectionr h2{
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 0.5rem 0;
+}
+
+.about-content {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ccd8f8;
+}
+
+.about-content ul {
+  list-style-type: disc;
+  padding-left: 1.8rem;
+  margin: 0;
+}
+
+@keyframes slideInFromLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.about-heading:hover::after{
+  width: 200px;
+}

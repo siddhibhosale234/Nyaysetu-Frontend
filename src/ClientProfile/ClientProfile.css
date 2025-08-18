@@ -1,0 +1,338 @@
+:root {
+  --primary-color: #002147;  /* NyaySetu Dark Blue */
+  --hover-color: #003366;
+  --text-light: #ffffff;
+  --background-light: #f4f4f4;
+}
+
+/* Reset + Base */
+.Client-Profile-Page {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: var(--background-light);
+  width: 100vw;
+}
+
+.client-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+}
+
+/* Profile Card Style */
+.profile-box {
+  background-color: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid var(--primary-color);
+}
+
+.profile-details {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.profile-details h2{
+   color: var(--primary-color);
+}
+
+.profile-actions {
+  min-width: 180px;
+  text-align: right;
+}
+
+.edit-btn,
+.reset-btn {
+  background-color: #eee;
+  border: none;
+  padding: 6px 12px;
+  margin-bottom: 6px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  box-shadow: 0 2px 6px rgba(0, 33, 71, 0.1);
+}
+
+.edit-btn:hover {
+  background-color: var(--hover-color);
+  color: white;
+}
+
+.reset-btn:hover {
+  background-color: #fff3cd;
+}
+
+.logout {
+  color: #c70000;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+/* Metadata Card */
+.meta-info-box {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  flex-direction: column;
+}
+
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ffffff66;
+  padding: 12px 0;
+}
+
+.meta-row:last-child {
+  border-bottom: none;
+}
+
+.meta-label {
+  font-weight: bold;
+}
+
+.meta-value {
+  font-style: italic;
+}
+
+/* Case and Document Layout */
+.case-docs-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.case-desc,
+.shared-docs {
+  flex: 1;
+  min-width: 300px;
+  background-color: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.case-desc p {
+  background-color: #f9f9f9;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.shared-docs ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.shared-docs li {
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Notification Box */
+.notification {
+  text-align: center;
+  background-color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+  border: 1px dashed #ccc;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.notification:hover {
+  background-color: #f0f0f0;
+}
+
+.notification-content {
+  margin-top: 10px;
+  text-align: left;
+  background: #f9f9f9;
+  padding: 10px 16px;
+  border-radius: 8px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+  color: #333;
+}
+
+.notification-content ul {
+  padding-left: 20px;
+}
+
+.notification-content li {
+  margin-bottom: 8px;
+}
+
+/* Modal Overlay */
+.edit-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 3000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Modal Box */
+.edit-modal {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  animation: scaleUp 0.3s ease-out;
+}
+
+.edit-modal h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.edit-form label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.edit-form input,
+.edit-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 3px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.modal-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Animations */
+@keyframes scaleUp {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    background-color: rgba(0,0,0,0);
+  }
+  to {
+    background-color: rgba(0,0,0,0.4);
+  }
+}
+
+.error-text {
+  color: red;
+  font-size: 13px;
+  margin-top: 4px;
+  font-weight: 500;
+}
+/* Profile Photo Upload */
+.profile-image {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.profile-image .avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 4px solid var(--primary-color);
+  object-fit: cover;
+}
+
+.upload-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  font-size: 20px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 2px solid white;
+  transition: background-color 0.2s;
+}
+
+.upload-btn:hover {
+  background-color: var(--hover-color);
+}

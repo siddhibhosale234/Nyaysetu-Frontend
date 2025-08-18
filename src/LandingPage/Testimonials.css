@@ -1,0 +1,69 @@
+/* Testimonials.css */
+
+.testimonials-section {
+  padding: 80px 20px;
+  background: linear-gradient(145deg, #230384, rgba(10, 20, 50, 0.95));
+  color: #ffffff;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.testimonials-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #dce7ff;
+}
+
+.testimonial-carousel {
+  overflow: hidden;
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 16px;
+}
+
+.testimonial-slide {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.testimonial-card {
+  flex: 0 0 100%;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #e3edff;
+  position: relative;
+}
+
+.testimonial-card span {
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #a8c7ff;
+}
+
+.carousel-controls {
+  margin-top: 20px;
+}
+
+.carousel-controls button {
+  background: #230384;
+  border: none;
+  color: #d0e1ff;
+  padding: 10px 16px;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.carousel-controls button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}

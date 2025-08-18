@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+} */
+
+.background {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('./background.png');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#login1 {
+  background: rgba(30, 60, 120, 0.8);
+  border-radius: 17px;
+  backdrop-filter: blur(6px);
+  padding: 25px 30px;
+  width: 100%;
+  max-width: 40vw;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow-y: auto;
+  max-height: 90vh;
+  animation: fadeInUp 0.6s ease-out;
+  opacity: 1;
+  overflow-x: hidden;
+}
+
+#logo {
+  height: 70px;
+  width: 70px;
+  border-radius: 12px;
+  border: 2px solid #1e375a;
+  background-color: #fff;
+}
+
+#head {
+  color: #ffffff;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+#login1 input,
+#login1 select,
+#login1 textarea {
+  width: 280px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #1e375a;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+#login1 input::placeholder,
+#login1 textarea::placeholder {
+  color: #c2c2c2;
+}
+
+#login1 input:focus,
+#login1 select:focus,
+#login1 textarea:focus {
+  outline: none;
+  border-color: #3f80ff;
+  box-shadow: 0 0 8px rgba(63, 128, 255, 0.3);
+}
+
+#login1 button {
+  padding: 12px 30px;
+  background-color: #3f80ff;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(63, 128, 255, 0.3);
+}
+
+#login1 button:hover {
+  background-color: #3466cc;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(63, 128, 255, 0.5);
+}
+
+.text textarea {
+  resize: none;
+  height: 80px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional responsiveness */
+@media (max-width: 768px) {
+  #login1 {
+    max-height: none;
+    overflow-y: visible;
+    width: 100%;
+    padding: 20px;
+  }
+
+  #login1 input,
+  #login1 select,
+  #login1 textarea {
+    width: 90%;
+  }
+
+  .background {
+    align-items: flex-start;
+  }
+}

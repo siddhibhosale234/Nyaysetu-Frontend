@@ -1,0 +1,310 @@
+/* ==== GLOBAL ==== */
+.userHomeBody {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #0b1a2e, #102d54);
+  color: white;
+}
+
+/* Smooth fade-in for entire page */
+.home-container {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes subtlePulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 4px 20px rgba(0, 191, 255, 0.3); }
+  50% { transform: scale(1.02); box-shadow: 0 6px 25px rgba(0, 191, 255, 0.45); }
+}
+
+/* Navbar links */
+.navbarUserHome a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  margin: 0 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbarUserHome a:hover {
+  color: #1e90ff;
+  transform: scale(1.1);
+}
+
+.navbarUserHome a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: #1e90ff;
+  transition: width 0.3s ease;
+}
+
+.navbarUserHome a:hover::after {
+  width: 100%;
+}
+
+/* ==== NAVBAR ==== */
+.navbarUserHome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fadeDown 0.8s ease-in-out;
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.logoUserHome {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nyaysetu-logoUserHome {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-textUserHome {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.justice-imgUserHome {
+  max-width: 280px;
+  width: 100%;
+  border-radius: 15px;
+  animation: subtlePulse 5s infinite ease-in-out;
+}
+
+.nav-linksUserHome {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-linksUserHome li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.nav-linksUserHome li a:hover {
+  color: #00bfff;
+}
+
+/* ==== HERO ==== */
+.heroUserHome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 50px;
+  flex-wrap: wrap;
+}
+
+.hero-textUserHome {
+  flex: 1.3;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  color: white;
+  animation: fadeUp 1s ease-in-out;
+}
+
+.hero-textUserHome h1 {
+  font-size: 2.8rem;
+  line-height: 1.3;
+}
+
+.hero-imageUserHome {
+  flex: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-buttonsUserHome {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.btnUserHome {
+  padding: 10px 20px;
+  border-radius: 25px;
+  background: #00bfff;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btnUserHome:hover {
+  background: #008ccc;
+  transform: translateY(-2px);
+}
+
+.btnUserHome.outline {
+  background: transparent;
+  border: 2px solid #00bfff;
+  color: #00bfff;
+}
+
+.hero-imageUserHome img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 191, 255, 0.3);
+  animation: subtlePulse 6s infinite ease-in-out;
+}
+
+/* ==== SERVICES ==== */
+.servicesUserHome {
+  padding: 50px 40px;
+  text-align: center;
+  animation: fadeUp 1s ease-in-out;
+}
+
+.service-cardsUserHome {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.cardUserHome {
+  max-width: 280px;
+  padding: 20px;
+  border-radius: 15px;
+  transition: transform 0.3s ease, background 0.3s ease;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.cardUserHome:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ==== CONTACT ==== */
+.contactUserHome {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(145deg, rgba(11, 26, 46, 0.6), rgba(16, 45, 84, 0.6));
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.contactUserHome h2 {
+  font-size: 2.4rem;
+  margin-bottom: 25px;
+  font-weight: bold;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 10px rgba(0, 191, 255, 0.4);
+}
+
+.contactUserHome glass {
+  max-width: 600px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInScale 0.9s ease forwards;
+}
+
+.contactUserHome input,
+.contactUserHome textarea {
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+.contactUserHome input{
+    margin: 30px;
+    transform: translateY(-70%);
+}
+.contactUserHome input:focus,
+.contactUserHome textarea:focus {
+  outline: none;
+  background: rgba(0, 191, 255, 0.15);
+  box-shadow: 0 0 8px rgba(0, 191, 255, 0.4);
+}
+
+.contactUserHome button.btnUserHome {
+  width: 50%;
+  padding: 14px 20px;
+  background: #00bfff;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contactUserHome button.btnUserHome:hover {
+  background: #008ccc;
+  transform: translateY(-3px);
+}
+
+/* ==== FOOTER ==== */
+.footerUserHome {
+  text-align: center;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.hireUserHome{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.hireUserHome button.btnUserHome{
+  width: 50%;
+
+}

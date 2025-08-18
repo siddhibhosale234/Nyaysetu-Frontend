@@ -1,0 +1,118 @@
+/* ReminderPage.css */
+.reminder-body{
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../Login/background.png');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reminder-container {
+  height: 70vh;
+  width: 70vw;
+  margin: auto;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(5, 30, 66, 0.6);
+  backdrop-filter: blur(1px);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.reminder-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.reminder-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.reminder-input,
+.reminder-datepicker {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  background: rgba(5, 30, 66, 0.6);
+  color: white;
+  outline: none;
+  box-shadow: 0px 2px 2px black;
+  width: 60%;
+}
+
+
+.reminder-button {
+  padding: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  border: none;
+  background-color: rgb(31, 108, 144);
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.reminder-button:hover {
+  background-color: #32bffb;
+}
+
+.reminder-list {
+  list-style: none;
+  font-size: 1.2rem;
+  padding: 0;
+  color: white;
+}
+.reminder-container h3{
+  font-size: 1.5rem;
+}
+/* Datepicker overrides */
+.react-datepicker__input-container input {
+  width: 60%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(5, 30, 66);
+  color: #ffffff;
+  font-size: 1rem;
+  outline: none;
+}
+
+.react-datepicker__header {
+  background-color: rgba(5, 30, 66);
+  border-bottom: none;
+  color: white;
+}
+
+.react-datepicker__current-month,
+.react-datepicker-time__header {
+  color: rgba(5, 30, 66);
+  font-weight: bold;
+}
+
+.react-datepicker__day,
+.react-datepicker__time-name {
+  color: rgba(5, 30, 66);
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul li.react-datepicker__time-list-item--selected {
+  background-color: rgba(5, 30, 66);
+  color: white;
+}
+
+.react-datepicker__day:hover,
+.react-datepicker__time-list-item:hover {
+  background-color: white;
+  cursor: pointer;
+}
+.reminder-container input::placeholder{
+  color: white;
+}

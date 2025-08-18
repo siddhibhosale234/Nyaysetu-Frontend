@@ -1,0 +1,144 @@
+.directions-container {
+  padding: 60px 20px;
+  background-color: #f7f9fc;
+  text-align: center;
+}
+
+.directions-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #002d84;
+  margin-bottom: 60px;
+}
+
+.vertical-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+
+.timeline-item {
+  width: 90%;
+  max-width: 1000px;
+}
+
+.timeline-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+  position: relative;
+}
+
+/* Left side */
+.timeline-desc {
+  position: relative;
+  flex: 1;
+  text-align: left;
+  padding-left: 30px;
+}
+
+.desc-number {
+  width: 36px;
+  height: 36px;
+  background-color: #002d84;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  position: absolute;
+  left: -18px;
+  top: 0;
+  z-index: 2;
+}
+
+.desc-line {
+  position: absolute;
+  width: 4px;
+  background-color: #002d84;
+  top: 18px;
+  bottom: 0;
+  left: -2px;
+  z-index: 1;
+  animation: growLine 0.8s ease-out forwards;
+}
+
+@keyframes growLine {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: 100%;
+    opacity: 1;
+  }
+}
+
+.desc-text h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.desc-text {
+  text-align: left;
+  max-width: 550px;
+}
+
+
+/* Right side card */
+.step-card-vertical {
+  background: white;
+  padding: 25px;
+  width: 240px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background-color: #002d84;
+  color: white;
+  border-radius: 50%;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  font-size: 1.1rem;
+}
+
+.step-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: #111;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline-content {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .desc-line {
+    left: 15px;
+  }
+
+  .timeline-desc {
+    padding-left: 40px;
+  }
+
+  .step-card-vertical {
+    margin-bottom: 20px;
+  }
+}

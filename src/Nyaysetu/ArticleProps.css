@@ -1,0 +1,45 @@
+.articles-section {
+  background-color: #f4f6fa; /* light neutral tone to match navbar */
+  padding: 40px;
+  min-height: 100vh;
+}
+
+.articles-heading {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #051E42; /* matching navbar heading color */
+  text-align: center;
+  animation: fadeInDown 0.6s ease-in-out;
+  
+}
+
+.articles-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (max-width: 1000px) {
+  .articles-container {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .articles-container {
+    column-count: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

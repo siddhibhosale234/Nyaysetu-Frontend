@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+.body1 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  /* background: linear-gradient(135deg, #0a0f2c, #1d2b64); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  animation: fadeInBody 1.5s ease-in-out;
+}
+
+@keyframes fadeInBody {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.form-container1 {
+  background: rgba(30, 60, 120, 0.8);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 35px 30px;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: fadeInUp 1s ease;
+  height: 85%;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logoimg {
+  height: 70px;
+  width: 70px;
+  object-fit: contain;
+  margin: 0 auto 20px;
+  display: block;
+  border-radius: 12px;
+  background-color: white;
+  padding: 5px;
+}
+
+.signup-form h2 {
+  margin-bottom: 24px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.input-wrapper input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #6c82c9;
+  border-radius: 10px;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+.input-wrapper input:focus {
+  border-color: #7da0ff;
+  background-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 0 8px rgba(125, 160, 255, 0.4);
+  outline: none;
+}
+
+::placeholder {
+  color: #dcdcdc;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #3b82f6, #2563eb);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(to right, #2563eb, #1e40af);
+  transform: scale(1.02);
+}
+
+.login-text {
+  margin-top: 18px;
+  font-size: 14px;
+  color: #d1d5db;
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: #93c5fd;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0;
+  margin-left: 5px;
+}
+
+.error {
+  color: #f87171;
+  font-size: 13px;
+  margin-top: -8px;
+  margin-bottom: 10px;
+}
+.input-icon{
+  color: #ffffff;
+}
+.Background2{
+  height: 100vh;
+  width: 100vw;
+  background-image: url('./background2.png');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

@@ -1,0 +1,50 @@
+/* Container for Cards (optional) */
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Card Styling */
+.cards {
+  flex: 0 0 auto;
+  width: 200px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.7); /* Glass effect */
+  backdrop-filter: blur(8px); /* Blur for glassmorphism */
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-align: center;
+  border: 1px solid rgba(222, 189, 253, 0.6); /* Subtle inner border */
+}
+
+.cards:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 10px 32px #00bcd4;
+}
+
+.icon {
+  margin-bottom: 12px;
+  color: #00bcd4; /* Accent cyan from navbar hover */
+  font-size: 1.8rem;
+}
+
+.cards h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #15495f;
+  margin: 0.5rem 0;
+}
+
+.cards p {
+  font-size: 0.875rem;
+  color: #15495f;
+}
+
+
+

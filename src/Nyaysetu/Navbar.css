@@ -1,0 +1,124 @@
+/* Navbar.css */
+
+.navbarLaw {
+  position: sticky;
+  top: 0;
+  margin: 0;
+  width: 100vw;
+  background: rgba(5, 30, 66, 0.6); /* Slightly more transparent */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  backdrop-filter: blur(12px); /* More blur for glass effect */
+  overflow-x: hidden;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease-in-out;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.titleLogoLaw {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.titleLogoLaw img {
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.titleLogoLaw img:hover {
+  transform: scale(1.1);
+}
+
+.titleLogoLaw h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e0f7fa;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInDown 0.6s ease both;
+}
+
+.listLaw ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.listLaw ul li a {
+  text-decoration: none;
+  color: #e0f7fa;
+  font-size: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.listLaw ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background: #00bcd4;
+  transition: width 0.3s ease;
+}
+
+.listLaw ul li a:hover {
+  color: #a6f2f5;
+}
+
+.listLaw ul li a:hover::after {
+  width: 100%;
+}
+
+.navbar-iconsLaw {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-shrink: 0;
+}
+
+.notificationsLaw,
+.profileLaw {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e0f7fa;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.notificationsLaw:hover,
+.profileLaw:hover {
+  transform: scale(1.1);
+  color: #4ade80;
+}
+
+.notificationsLaw svg,
+.profileLaw svg {
+  vertical-align: middle;
+  display: block;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

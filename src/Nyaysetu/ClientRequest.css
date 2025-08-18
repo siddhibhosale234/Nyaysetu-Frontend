@@ -1,0 +1,106 @@
+/* ClientRequest.css */
+
+#client-request-container {
+    height: 100vh; /* optional for full height */
+  width: 100vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('./background.png');
+  padding: 2rem;
+}
+
+#client-request-container .no-requests-message {
+  max-width: 600px;
+  margin: 4rem auto;
+  text-align: center;
+}
+
+#client-request-container .no-requests-message h1 {
+  font-size: 1.8rem;
+  color: #333;
+  margin: 0;
+}
+
+#client-request-container .requests-list {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#client-request-container .request-card {
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.3s ease;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+#client-request-container .request-card:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+#client-request-container .client-name {
+  color: #0052cc;
+  font-weight: 600;
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+#client-request-container .client-email {
+  color: #555;
+  font-weight: 400;
+  margin: 0;
+  font-size: 1.1rem;
+}
+#client-request-container .client-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+#client-request-container .client-buttons button.client-accept,
+#client-request-container .client-buttons button.client-deny {
+ all: unset;
+  padding: 0.5rem 1.5rem;
+  padding-left: 70px;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  min-width: 100px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+#client-request-container .client-buttons button.client-accept {
+  background-color: green ;
+}
+
+#client-request-container .client-buttons button.client-accept:hover {
+  background-color: darkgreen ;
+}
+
+#client-request-container .client-buttons button.client-deny {
+  background-color: red ;
+}
+
+#client-request-container .client-buttons button.client-deny:hover {
+  background-color: darkred ;
+}
+
+@media (max-width: 640px) {
+  #client-request-container {
+    padding: 1rem;
+  }
+
+  #client-request-container .request-card {
+    padding: 1rem 1.2rem;
+  }
+}
