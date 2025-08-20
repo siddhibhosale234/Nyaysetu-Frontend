@@ -61,7 +61,6 @@ function App() {
         <Route path='/servicesclient' element={<ServicesClient/>}/>
         <Route path='/aboutusclient' element={<UserAboutUs/>}/>
         <Route path="/chat/:roomId" element={<ChatWrapper />} />
-        <Route path='/error' element={<NotFound/>}/>
       </Routes>
     </BrowserRouter>
     </ReminderProvider>

@@ -46,31 +46,5 @@
   color: #15495f;
 }
 
-/* Responsive Cards */
-@media (max-width: 1024px) {
-  .container {
-    gap: 15px;
-  }
-  .cards {
-    width: 180px;
-    padding: 18px;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .cards {
-    width: 45%; /* two cards per row */
-  }
-}
-
-@media (max-width: 480px) {
-  .cards {
-    width: 100%; /* single card per row */
-  }
-}
 
 
