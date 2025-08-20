@@ -44,3 +44,69 @@
   font-size: 13px;
   margin-top: 4px;
 }
+
+/* 🌐 Responsive Design */
+@media (max-width: 1024px) {
+  .create-container {
+    max-width: 80%;
+    height: 85%;
+    padding: 25px;
+  }
+
+  .create-profile input {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .body2 {
+    background-position: center;
+    background-size: cover;
+    padding: 15px;
+  }
+
+  .create-container {
+    max-width: 90%;
+    height: auto;
+    max-height: 90vh;
+    padding: 20px;
+  }
+
+  .create-container h2 {
+    font-size: 1.4rem;
+  }
+
+  .create-profile label {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .body2 {
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .create-container {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: none;
+  }
+
+  .create-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .create-profile input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .error-text {
+    font-size: 12px;
+  }
+}

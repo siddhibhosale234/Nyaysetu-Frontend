@@ -44,3 +44,28 @@
   text-decoration: underline;
   color: #4dd0e1;
 }
+@media (max-width: 1000px) {
+  .article-card {
+    padding: 16px;
+  }
+
+  .article-card h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .article-card {
+    padding: 12px;
+    margin-bottom: 20px;
+  }
+
+  .article-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .article-date,
+  .article-tag {
+    font-size: 0.8rem;
+  }
+}

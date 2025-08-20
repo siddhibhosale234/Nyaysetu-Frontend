@@ -252,3 +252,120 @@
     display: none;
   }
 }
+/* 🌐 Responsive Enhancements */
+
+/* Tablet (≤1024px) */
+@media (max-width: 1024px) {
+  .navbarHire {
+    padding: 12px 24px;
+  }
+
+  .logo-textHire {
+    font-size: 1.25rem;
+  }
+
+  .hiring-title {
+    font-size: 2rem;
+  }
+
+  .search-area input {
+    width: 320px;
+  }
+}
+
+/* Small Tablets & Large Phones (≤768px) */
+@media (max-width: 768px) {
+  .navbarHire {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .nav-linksHire {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .hiring-section {
+    padding: 40px 16px;
+  }
+
+  .hiring-title {
+    font-size: 1.8rem;
+  }
+
+  .search-area input {
+    width: 100%;
+  }
+
+  .hiring-card {
+    height: auto;
+    padding: 16px;
+  }
+
+  .hiring-card img.card-image {
+    height: 90px;
+  }
+
+  .chat-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* Mobile (≤480px) */
+@media (max-width: 480px) {
+  .navbarHire {
+    padding: 10px 16px;
+  }
+
+  .logo-textHire {
+    font-size: 1.1rem;
+  }
+
+  .nav-linksHire {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hiring-section {
+    padding: 30px 12px;
+  }
+
+  .hiring-title {
+    font-size: 1.5rem;
+  }
+
+  .hiring-header p {
+    font-size: 0.9rem;
+  }
+
+  .hiring-grid {
+    gap: 18px;
+  }
+
+  .hiring-card h3 {
+    font-size: 1rem;
+  }
+
+  .hiring-card p {
+    font-size: 0.85rem;
+  }
+
+  .chat-btn {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .main-footer {
+    font-size: 0.85rem;
+  }
+}
+

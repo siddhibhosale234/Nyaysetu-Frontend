@@ -122,3 +122,64 @@
     transform: translateY(0);
   }
 }
+
+/* Responsive Navbar */
+@media (max-width: 900px) {
+  .listLaw {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(5, 30, 66, 0.95);
+    padding: 1rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .listLaw.active {
+    display: flex;
+  }
+
+  .navbarLaw {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  /* Toggle button (hamburger) */
+  .toggle-btnLaw {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .toggle-btnLaw span {
+    width: 25px;
+    height: 3px;
+    background: #e0f7fa;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  /* Animate toggle into X when active */
+  .toggle-btnLaw.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .toggle-btnLaw.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .toggle-btnLaw.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+@media (max-width: 500px) {
+  .titleLogoLaw h1 {
+    font-size: 1.2rem;
+  }
+
+  .navbar-iconsLaw {
+    gap: 1rem;
+  }
+}

@@ -3,12 +3,13 @@ import './ContactUs.css';
 import { baseBookURL } from '../axios';
 import { NavbarLaw } from './Navbar';
 import { Footer } from './Footer';
+import { useNavigate } from 'react-router-dom';
 
 export function ContactUs() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [msg, setMsg] = useState('');
-
+    const navigate = useNavigate()
     async function handleSubmit() {
         const details = {
             Name: name,
@@ -25,6 +26,7 @@ export function ContactUs() {
         } catch (error) {
             alert('Something went wrong. Check console.');
             console.log(error);
+            navigate('/error')
         }
     }
 

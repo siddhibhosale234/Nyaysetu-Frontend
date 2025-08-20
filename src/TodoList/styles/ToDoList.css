@@ -138,3 +138,56 @@
     transform: translateY(-30px) scale(1.1);
   }
 }
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .todo-card {
+    max-width: 90%;
+    padding: 25px 20px;
+  }
+
+  #h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .input-wrapper input,
+  .input-wrapper button {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  #ul {
+    max-height: 250px;
+  }
+
+  #li {
+    padding: 10px;
+    margin: 8px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .todo-card {
+    max-width: 95%;
+    padding: 20px 15px;
+  }
+
+  #h2 {
+    font-size: 20px;
+  }
+
+  .input-wrapper input,
+  .input-wrapper button {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  #ul {
+    max-height: 200px;
+  }
+
+  #li {
+    padding: 8px;
+    margin: 6px 0;
+  }
+}

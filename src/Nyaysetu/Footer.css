@@ -84,3 +84,46 @@
   font-weight: bold;
   font-size: 0.9rem;
 }
+/* Responsive Footer */
+@media (max-width: 1024px) {
+  .footer1-content {
+    gap: 15px;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer1-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer1-section {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .socials {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer1 {
+    padding: 25px 10px 15px;
+  }
+
+  .footer1-section h3,
+  .footer1-section h4 {
+    font-size: 1rem;
+  }
+
+  .footer1-section ul li a {
+    font-size: 0.9rem;
+  }
+
+  .footer1-bottom {
+    font-size: 0.8rem;
+  }
+}

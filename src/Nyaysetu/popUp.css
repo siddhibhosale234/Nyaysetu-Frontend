@@ -62,3 +62,48 @@
     transform: translate(-50%, -80%) scale(1);
   }
 }
+
+/* Responsive Popup */
+@media (max-width: 768px) {
+  .popUp {
+    width: 90%;
+    padding: 1.5rem;
+    transform: translate(-50%, -70%);
+  }
+
+  .popUp h1 {
+    font-size: 1.5rem;
+  }
+
+  .popUp h3 {
+    font-size: 1rem;
+  }
+
+  .popUp button {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .popUp {
+    width: 95%;
+    padding: 1rem;
+    transform: translate(-50%, -60%);
+  }
+
+  .popUp h1 {
+    font-size: 1.2rem;
+  }
+
+  .popUp h3 {
+    font-size: 0.9rem;
+  }
+
+  .popUp button {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+  }
+}
+

@@ -106,3 +106,43 @@
     transform: translateY(-30px) scale(1.1);
   }
 }
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .notfound-card {
+    padding: 30px;
+  }
+
+  .notfound-card h1 {
+    font-size: 72px;
+  }
+
+  .notfound-card p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .notfound-card a {
+    font-size: 14px;
+    padding: 10px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .notfound-card {
+    padding: 20px;
+  }
+
+  .notfound-card h1 {
+    font-size: 48px;
+  }
+
+  .notfound-card p {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .notfound-card a {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+}

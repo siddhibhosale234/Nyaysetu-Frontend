@@ -27,6 +27,7 @@ export function Profile(){
     }
     catch(error){
         alert(error)
+        navigate('/error')
     }
     }
     return(<div style={{width:"100vw"}}>

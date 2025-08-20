@@ -33,3 +33,50 @@
   transform: translateY(-6px);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
 }
+
+/* Responsive Features Section */
+@media (max-width: 1024px) {
+  .features-section h2 {
+    font-size: 2rem;
+  }
+
+  .feature-card {
+    font-size: 1rem;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-section {
+    padding: 40px 15px;
+  }
+
+  .features-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .features-grid {
+    gap: 20px;
+  }
+
+  .feature-card {
+    padding: 18px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .features-section {
+    padding: 30px 10px;
+  }
+
+  .features-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .feature-card {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+}

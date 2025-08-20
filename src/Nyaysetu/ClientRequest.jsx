@@ -21,6 +21,7 @@ export function ClientRequest() {
         }
       } catch (error) {
         console.log(error);
+        navigate('/error')
       }
     }
     fetchHireRequests();
@@ -33,6 +34,7 @@ export function ClientRequest() {
         if (data?.clientProfileDataList) setClients(data.clientProfileDataList);
       } catch (error) {
         console.log(error);
+        navigate('/error')
       }
     }
     fetchClients();
@@ -51,6 +53,7 @@ export function ClientRequest() {
       }
     } catch (error) {
       console.log(error);
+      navigate('/error')
     }
   };
 
@@ -64,6 +67,7 @@ export function ClientRequest() {
   } catch (error) {
     console.log(error);
     alert('Error accepting request');
+    navigate('/error')
   }
 };
 

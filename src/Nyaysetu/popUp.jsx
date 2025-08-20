@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import './popUp.css'
 import { baseBookURL } from "../axios";
+import { useNavigate } from "react-router-dom";
 export function PopUp(){
     const [showPopUp,setShowPopUp]  = useState(true);
     const [lawyerName,setLawyerName] = useState('')
     const id = localStorage.getItem("lawyerProfile")
+    const navigate = useNavigate()
     console.log("Lawyer ID from localStorage:", id);
     useEffect(()=>{
       const handleLawyerName = async()=>{
@@ -14,6 +16,7 @@ export function PopUp(){
     }
     catch(error){
       alert('some error occurred')
+      navigate('/error')
     }
   };
     if(id){

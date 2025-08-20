@@ -66,6 +66,7 @@ const CreateProfile = () => {
     } catch (error) {
       alert('Check log')
       console.log(error);
+      navigate('/error')
     }
   };
 

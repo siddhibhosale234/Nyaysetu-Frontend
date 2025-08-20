@@ -72,6 +72,7 @@ export default function HiringPage() {
       }
     } catch (error) {
       console.log(error);
+      navigate('/error')
     }
   }
   fetchLawyerProfile();

@@ -101,3 +101,76 @@ h2 {
     transform: scale(1);
   }
 }
+/* ---------- Responsive Design ---------- */
+
+/* Tablets and smaller desktops */
+@media (max-width: 1024px) {
+  .container1 {
+    width: 320px;
+    padding: 30px 20px;
+  }
+
+  .logo-img {
+    height: 90px;
+  }
+
+  .login-form input,
+  .forgot-form input {
+    font-size: 0.95rem;
+    padding: 9px;
+  }
+}
+
+/* Mobile (portrait phones) */
+@media (max-width: 768px) {
+  .container1 {
+    width: 90%;
+    padding: 25px 20px;
+  }
+
+  .logo-img {
+    height: 80px;
+  }
+
+  .login-form input,
+  .forgot-form input {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .login-form button,
+  .forgot-form button {
+    font-size: 0.9rem;
+    padding: 9px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Very small devices (less than 480px) */
+@media (max-width: 480px) {
+  .container1 {
+    width: 95%;
+    padding: 20px 15px;
+  }
+
+  .logo-img {
+    height: 70px;
+  }
+
+  .login-form input,
+  .forgot-form input {
+    font-size: 0.85rem;
+  }
+
+  .login-form button,
+  .forgot-form button {
+    font-size: 0.85rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+}

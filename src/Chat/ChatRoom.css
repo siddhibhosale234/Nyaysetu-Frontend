@@ -80,3 +80,52 @@
 .chat-input button:hover {
   background-color: #005fcc;
 }
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .chat-room-container {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  .chat-header {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  .chat-messages {
+    padding: 0.5rem;
+  }
+
+  .chat-input input {
+    width: 65%;
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .chat-input button {
+    width: 35%;
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .chat-header {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .chat-input {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .chat-input input,
+  .chat-input button {
+    width: 100%;
+    border-radius: 10px;
+    font-size: 0.85rem;
+  }
+}

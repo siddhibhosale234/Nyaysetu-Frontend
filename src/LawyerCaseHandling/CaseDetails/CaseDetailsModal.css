@@ -100,3 +100,52 @@
   color: #0a0f2c;
 }
 
+/* -------- Responsive -------- */
+@media (max-width: 768px) {
+  .case-container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .headers {
+    font-size: 1.5rem;
+  }
+
+  .form-section {
+    max-width: 100%;
+  }
+
+  #upload {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .documents-table th,
+  .documents-table td {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .headers {
+    font-size: 1.2rem;
+  }
+
+  .form-section input,
+  .form-section select {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  #upload {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .documents-table th,
+  .documents-table td {
+    font-size: 0.8rem;
+    padding: 6px;
+  }
+}

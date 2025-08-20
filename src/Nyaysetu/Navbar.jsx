@@ -30,6 +30,12 @@ export function NavbarLaw() {
           <FaUserCircle size={30} color="#00c9ff" />
         </div>
       </div>
+      <div class="toggle-btnLaw" onclick="document.querySelector('.listLaw').classList.toggle('active'); this.classList.toggle('active');">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
     </nav>
   );
 }

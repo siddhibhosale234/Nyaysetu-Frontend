@@ -107,6 +107,7 @@ const fetchProfilePhoto = async () => {
     }
   } catch (error) {
     console.log(error);
+    navigate('/error')
   }
 };
 

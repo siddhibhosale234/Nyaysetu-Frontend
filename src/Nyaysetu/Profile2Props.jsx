@@ -2,10 +2,12 @@ import './Profile2.css';
 import { Profile2 } from './Profile2';
 import { useEffect, useState } from 'react';
 import { baseBookURL } from '../axios';
+import { useNavigate } from 'react-router-dom';
 
 export function Profile2Props() {
   const id = localStorage.getItem('lawyerProfile')
   const [specializations,setSpecializations] = useState([])
+  const navigate = useNavigate()
   const specializationIcons = {
     "Civil Law":"https://cdn-icons-png.flaticon.com/128/15624/15624602.png",
     "Criminal Law":"https://cdn-icons-png.flaticon.com/128/10236/10236893.png",
@@ -39,7 +41,7 @@ export function Profile2Props() {
       }
         catch(error){
            console.log("Error in fetching profile:",error);
-           
+           navigate('/error')
         }
     }
     if(id){

@@ -336,3 +336,113 @@
 .upload-btn:hover {
   background-color: var(--hover-color);
 }
+
+/* 🌐 Responsive Design */
+@media (max-width: 1024px) {
+  .client-container {
+    padding: 15px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nav-links {
+    margin-top: 10px;
+  }
+
+  .profile-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-details {
+    align-items: center;
+  }
+
+  .profile-actions {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .case-docs-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 20px;
+    border-radius: 8px;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .profile-box {
+    padding: 18px;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .case-desc,
+  .shared-docs {
+    padding: 18px;
+  }
+
+  .notification-content {
+    max-width: 90%;
+    font-size: 13px;
+  }
+
+  .edit-modal {
+    max-width: 90%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .profile-box {
+    gap: 12px;
+  }
+
+  .profile-details h2 {
+    font-size: 1.2rem;
+  }
+
+  .edit-btn,
+  .reset-btn {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .notification {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .edit-modal {
+    max-width: 95%;
+    padding: 15px;
+  }
+}

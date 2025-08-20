@@ -4,8 +4,10 @@ import logo from './logo.jpg';
 import { NavbarLaw } from '../Nyaysetu/Navbar';
 import { Footer } from '../Nyaysetu/Footer';
 import { baseBookURL } from '../axios';
+import { useNavigate } from 'react-router-dom';
 
 function LawyerCasesTable() {
+  const navigate = useNavigate()
   const lawyerId = localStorage.getItem('lawyerProfile')
   const [allCases, setAllCases] = useState([]);
 
@@ -39,6 +41,7 @@ function LawyerCasesTable() {
     }
     catch(error){
       console.log(error);
+      navigate('/error')
     }
     }
     fetchCase();
@@ -61,9 +64,17 @@ function LawyerCasesTable() {
       };
     try {
       const { data } = await baseBookURL.post('/caseDetails/addCase', caseToSend);
-      if (data?.Success) {
+      if (data?.Success && data?.caseData) {
         alert(data?.Message);
-        setAllCases([...allCases, { ...caseToSend, id: allCases.length + 1 }]);
+        const addedCase = {
+        _id: data.caseData._id,
+        id: allCases.length + 1, // for table display
+        client: data.caseData.ClientName,
+        type: data.caseData.CaseType,
+        date: data.caseData.Date,
+        status: "Open"
+      };
+        setAllCases([...allCases, addedCase]);
         setNewCase({ client: "", type: "", status: "Open", date: "" });
       }
       else{
@@ -71,6 +82,7 @@ function LawyerCasesTable() {
       }
     } catch (error) {
     console.error("Error adding case:", error);
+    navigate('/error')
   }
 };
 
@@ -93,6 +105,7 @@ function LawyerCasesTable() {
     }
   } catch (err) {
     console.error("Error deleting case:", err);
+    navigate('/error')
   }
 };
 
