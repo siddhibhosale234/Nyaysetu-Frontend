@@ -18,7 +18,6 @@ export function Profile1() {
       }
     } catch (error) {
       console.log(error);
-      navi
       
     }
   }

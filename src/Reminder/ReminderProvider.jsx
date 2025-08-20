@@ -12,7 +12,6 @@ export const ReminderProvider = ({ children }) => {
   const lawyerId = localStorage.getItem("lawyerProfile");
 const clientId = localStorage.getItem("client");
 const id = lawyerId || clientId;
-
   const enableSound = () => {
   if (audioRef.current) {
     audioRef.current
