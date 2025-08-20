@@ -1,6 +1,5 @@
 import React, { createContext, useEffect, useRef, useState } from "react";
 import { baseBookURL } from "../axios";
-import { useNavigate } from "react-router-dom";
 
 export const ReminderContext = createContext();
 
@@ -11,9 +10,9 @@ export const ReminderProvider = ({ children }) => {
   const timersRef = useRef([]); // store all timeouts
   const loggedin = localStorage.getItem("loggedin");
   const lawyerId = localStorage.getItem("lawyerProfile");
-const clientId = localStorage.getItem("clientId");
+const clientId = localStorage.getItem("client");
 const id = lawyerId || clientId;
-const navigate = useNavigate()
+
   const enableSound = () => {
   if (audioRef.current) {
     audioRef.current
@@ -48,7 +47,6 @@ const navigate = useNavigate()
       }
     } catch (err) {
       console.error("Error fetching reminders", err);
-      navigate('/error')
     }
   };
   useEffect(() => {

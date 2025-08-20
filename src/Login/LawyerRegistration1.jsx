@@ -79,7 +79,6 @@ export function LawyerRegistration1() {
     } catch (error) {
       console.error(error);
       alert('An error occurred');
-      navigate('/error')
     }
   };
 

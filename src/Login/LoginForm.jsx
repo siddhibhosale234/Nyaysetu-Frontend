@@ -76,7 +76,6 @@ export function Login(){
   } catch (error) {
     console.error("Login error:", error);
     alert("An error occurred. Please try again.");
-    navigate('/error')
   }
 };
 

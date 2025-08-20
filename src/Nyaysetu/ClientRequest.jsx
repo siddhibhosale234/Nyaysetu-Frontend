@@ -67,7 +67,6 @@ export function ClientRequest() {
   } catch (error) {
     console.log(error);
     alert('Error accepting request');
-    navigate('/error')
   }
 };
 

@@ -26,7 +26,6 @@ import { ContactUs } from './Nyaysetu/ContactUs.jsx';
 import ServicesClient from './Services (1)/Services.jsx';
 import UserAboutUs from './UserAboutUs/UserAboutUs.jsx';
 import ChatWrapper from './Chat/ChatWrapper.jsx';
-import NotFound from './TodoList/components/NotFound.jsx';
 function App() {
   const [profileData, setProfileData] = useState(null)
   return (

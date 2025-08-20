@@ -64,17 +64,9 @@ function LawyerCasesTable() {
       };
     try {
       const { data } = await baseBookURL.post('/caseDetails/addCase', caseToSend);
-      if (data?.Success && data?.caseData) {
+      if (data?.Success) {
         alert(data?.Message);
-        const addedCase = {
-        _id: data.caseData._id,
-        id: allCases.length + 1, // for table display
-        client: data.caseData.ClientName,
-        type: data.caseData.CaseType,
-        date: data.caseData.Date,
-        status: "Open"
-      };
-        setAllCases([...allCases, addedCase]);
+        setAllCases([...allCases, { ...caseToSend, id: allCases.length + 1 }]);
         setNewCase({ client: "", type: "", status: "Open", date: "" });
       }
       else{
@@ -105,7 +97,6 @@ function LawyerCasesTable() {
     }
   } catch (err) {
     console.error("Error deleting case:", err);
-    navigate('/error')
   }
 };
 

@@ -2,13 +2,11 @@
 import { useEffect, useState } from 'react';
 import { baseBookURL } from '../axios';
 import './Profile1.css';
-import { useNavigate } from 'react-router-dom';
 
 export function Profile1() {
   const id = localStorage.getItem('lawyerProfile')
   const [profileInfo,setProfileInfo] = useState(null)
   const [profilePhoto,setProfilePhoto] = useState(null)
-  const navigate = useNavigate()
   const fetchProfilePhoto = async()=>{
     try {
       const fetchedProfilePhoto = await baseBookURL.get(`/profilePic/get/${id}`)
@@ -20,7 +18,7 @@ export function Profile1() {
       }
     } catch (error) {
       console.log(error);
-      navigate('/error')
+      navi
       
     }
   }
@@ -31,7 +29,7 @@ export function Profile1() {
     }
     catch(error){
       console.log("Error in fetching info:",error);
-      navigate('/error')
+      
     }
   }
   
