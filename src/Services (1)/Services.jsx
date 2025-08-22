@@ -9,7 +9,8 @@ import labourLawIcon from "./Assets/labourlaw.jpeg";
 import taxLawIcon from "./Assets/taxlaw.webp";
 import "../LandingPage/Footer1.css";
 import { useNavigate } from "react-router-dom";
-import { FaBell,FaUserCircle } from "react-icons/fa";
+import { FaBell, FaUserCircle, FaBars, FaTimes } from "react-icons/fa";
+import { useState } from "react";
 const servicesData = [
   {
     title: "Criminal Law",
@@ -90,24 +91,73 @@ const servicesData = [
 
 export default function ServicesClient() {
   const navigate = useNavigate()
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <>
     <div className="ServicesClientBody">
       {/* Navbar */}
      <nav className="navbarServicesClient">
-        <div className="logoServicesClient">
-          <img src={logo} alt="NyaySetu Logo" className="nyaysetu-logoServicesClient" />
-          <span className="logo-textServicesClient">NyaySetu</span>
-        </div>
-        <ul className="nav-linksServicesClient">
-          <li><a href="/clientHome">Home</a></li>
-          <li><a href="/servicesclient">Services</a></li>
-          <li><a href="/hiringPage">Hire</a></li>
-          <li><a href="/aboutusclient">About</a></li>
-          <li onClick={()=>{navigate('/reminders?role=client')}}><FaBell size={20} color="#00c9ff" /></li>
-          <li onClick={()=>{navigate('clientprofile')}}><FaUserCircle size={30} color="#00c9ff" /></li>
-        </ul>
-      </nav>
+          <div className="logoServicesClient">
+            <img
+              src={logo}
+              alt="NyaySetu Logo"
+              className="nyaysetu-logoServicesClient"
+            />
+            <span className="logo-textServicesClient">NyaySetu</span>
+          </div>
+
+          {/* Toggle Button */}
+          <div
+            className="menu-toggleServicesClient"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            {menuOpen ? (
+              <FaTimes size={25} color="#00c9ff" />
+            ) : (
+              <FaBars size={25} color="#00c9ff" />
+            )}
+          </div>
+
+          {/* Nav Links */}
+          <ul className={`nav-linksServicesClient ${menuOpen ? "open" : ""}`}>
+            <li>
+              <a href="/clientHome" onClick={() => setMenuOpen(false)}>
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="/servicesclient" onClick={() => setMenuOpen(false)}>
+                Services
+              </a>
+            </li>
+            <li>
+              <a href="/hiringPage" onClick={() => setMenuOpen(false)}>
+                Hire
+              </a>
+            </li>
+            <li>
+              <a href="/aboutusclient" onClick={() => setMenuOpen(false)}>
+                About
+              </a>
+            </li>
+            <li
+              onClick={() => {
+                navigate("/reminders?role=client");
+                setMenuOpen(false);
+              }}
+            >
+              <FaBell size={20} color="#00c9ff" />
+            </li>
+            <li
+              onClick={() => {
+                navigate("/clientprofile");
+                setMenuOpen(false);
+              }}
+            >
+              <FaUserCircle size={30} color="#00c9ff" />
+            </li>
+          </ul>
+        </nav>
 
       {/* Main services grid */}
       <div className="services-sectionServicesClient">

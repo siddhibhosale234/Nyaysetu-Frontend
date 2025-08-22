@@ -2,7 +2,10 @@
 import React, { useEffect, useState } from "react";
 import "./UserAboutUs.css";
 import nyayLogo from "./Nyaysetu logo.jpg";
-import { FaUsers, FaGavel, FaCheckCircle, FaHandshake, FaUserCircle, FaBell } from "react-icons/fa";
+import { 
+  FaUsers, FaGavel, FaCheckCircle, FaHandshake, 
+  FaUserCircle, FaBell, FaBars, FaTimes 
+} from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -36,6 +39,7 @@ const testimonials = [
 
 const UserAboutUs = () => {
   const navigate = useNavigate()
+  const [menuOpen, setMenuOpen] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
@@ -60,12 +64,26 @@ const UserAboutUs = () => {
           <img src={nyayLogo} alt="NyaySetu Logo" className="nyaysetu-logoClientAboutUs" />
           <span className="logo-textClientAboutUs">NyaySetu</span>
         </div>
-        <ul className="nav-linksClientAboutUs">
-          <li><a href="/clienthome">Home</a></li>
-          <li><a href="/servicescient">Services</a></li>
-          <li><a href="/aboutusclient">About</a></li>
-          <li onClick={()=>{navigate('/reminders?role=client')}}><FaBell size={20} color="#00c9ff" /></li>
-          <li onClick={()=>{navigate('/clientprofile')}}><FaUserCircle size={30} color="#00c9ff" /></li>
+
+        {/* Toggle button */}
+        <div 
+          className="menu-toggleClientAboutUs" 
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <FaTimes size={25} color="#00c9ff"/> : <FaBars size={25} color="#00c9ff"/>}
+        </div>
+
+        {/* Nav links */}
+        <ul className={`nav-linksClientAboutUs ${menuOpen ? "open" : ""}`}>
+          <li><a href="/clienthome" onClick={()=>setMenuOpen(false)}>Home</a></li>
+          <li><a href="/servicesclient" onClick={()=>setMenuOpen(false)}>Services</a></li>
+          <li><a href="/aboutusclient" onClick={()=>setMenuOpen(false)}>About</a></li>
+          <li onClick={()=>{navigate('/reminders?role=client'); setMenuOpen(false)}}>
+            <FaBell size={20} color="#00c9ff" />
+          </li>
+          <li onClick={()=>{navigate('/clientprofile'); setMenuOpen(false)}}>
+            <FaUserCircle size={30} color="#00c9ff" />
+          </li>
         </ul>
       </nav>
 

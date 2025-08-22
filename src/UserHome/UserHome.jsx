@@ -5,12 +5,13 @@ import justiceImage from "./styamevajayatey.png"; // Hero image
 import nyayLogo from "./Nyaysetu logo.jpg"; // New logo
 import { baseBookURL } from "../axios";
 import { useNavigate } from "react-router-dom";
-import { FaBell , FaUserCircle} from "react-icons/fa";
+import { FaBell , FaUserCircle, FaBars, FaTimes } from "react-icons/fa";
 const UserHome = () => {
   const navigate = useNavigate();
   const [name,setName] = useState('')
   const [email,setEmail] = useState('')
   const [msg,setMsg] = useState('')
+   const [menuOpen, setMenuOpen] = useState(false);
   const handleRequest = async(e)=>{
     e.preventDefault();
     const requestData = {
@@ -35,19 +36,27 @@ const UserHome = () => {
     <div className="userHomeBody">
     <div className="home-container">
       {/* NAVBAR */}
+      {/* NAVBAR */}
       <nav className="navbarUserHome">
         <div className="logoUserHome">
           <img src={nyayLogo} alt="NyaySetu Logo" className="nyaysetu-logoUserHome" />
           <span className="logo-textUserHome">NyaySetu</span>
         </div>
-        <ul className="nav-linksUserHome">
-          <li><a href="#home">Home</a></li>
-          <li><a href="/servicesclient">Services</a></li>
-          <li><a href="#hire">Hire</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="/aboutusclient">About</a></li>
-          <li onClick={()=>{navigate('/reminders?role=client')}}><FaBell size={20} color="#00c9ff" /></li>
-          <li onClick={()=>{navigate('/clientprofile')}}><FaUserCircle size={30} color="#00c9ff" /></li>
+
+        {/* Toggle Button */}
+        <div className="menu-toggleUserHome" onClick={()=>setMenuOpen(!menuOpen)}>
+          {menuOpen ? <FaTimes size={25} color="#00c9ff"/> : <FaBars size={25} color="#00c9ff"/>}
+        </div>
+
+        {/* Nav Links */}
+        <ul className={`nav-linksUserHome ${menuOpen ? "open" : ""}`}>
+          <li><a href="#home" onClick={()=>setMenuOpen(false)}>Home</a></li>
+          <li><a href="/servicesclient" onClick={()=>setMenuOpen(false)}>Services</a></li>
+          <li><a href="#hire" onClick={()=>setMenuOpen(false)}>Hire</a></li>
+          <li><a href="#contact" onClick={()=>setMenuOpen(false)}>Contact</a></li>
+          <li><a href="/aboutusclient" onClick={()=>setMenuOpen(false)}>About</a></li>
+          <li onClick={()=>{navigate('/reminders?role=client'); setMenuOpen(false)}}><FaBell size={20} color="#00c9ff" /></li>
+          <li onClick={()=>{navigate('/clientprofile'); setMenuOpen(false)}}><FaUserCircle size={30} color="#00c9ff" /></li>
         </ul>
       </nav>
 

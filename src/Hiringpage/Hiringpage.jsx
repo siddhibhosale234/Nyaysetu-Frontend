@@ -3,7 +3,7 @@ import "./Hiringpage.css";
 import nyaysetulogo from "./NyaysetuLogo.png";
 import { baseBookURL } from "../axios";
 import { useNavigate } from "react-router-dom";
-import { FaBell, FaUserCircle } from "react-icons/fa";
+import { FaBell, FaUserCircle, FaBars, FaTimes } from "react-icons/fa";
 import { ClientChatRedirect } from "./ClientChatRedirect";
 // import lawyer1 from "./Assets/lawyer1.jpeg";
 // import lawyer2 from "./Assets/lawyer2.jpg";
@@ -13,19 +13,35 @@ import { ClientChatRedirect } from "./ClientChatRedirect";
 
 export function Navbar() {
   const navigate = useNavigate()
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <nav className="navbarHire">
+      {/* Logo */}
       <div className="logoHire">
         <img src={nyaysetulogo} alt="NyaySetu Logo" />
         <span className="logo-textHire">NyaySetu</span>
       </div>
-      <ul className="nav-linksHire">
+
+      {/* Hamburger Toggle */}
+      <button 
+        className="menu-toggleHire" 
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        {menuOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
+      </button>
+
+      {/* Links */}
+      <ul className={`nav-linksHire ${menuOpen ? "active" : ""}`}>
         <li><a href="/clientHome">Home</a></li>
         <li><a href="/servicesclient">Services</a></li>
         <li><a href="/hiringpage">Hire</a></li>
         <li><a href="/aboutusclient">About</a></li>
-        <li onClick={()=>{navigate('/reminders?role=client')}}><FaBell size={20} color="#00c9ff" /></li>
-        <li onClick={()=>{navigate('/clientprofile')}}><FaUserCircle size={30} color="#00c9ff" /></li>
+        <li onClick={() => { navigate('/reminders?role=client') }}>
+          <FaBell size={20} color="#00c9ff" />
+        </li>
+        <li onClick={() => { navigate('/clientprofile') }}>
+          <FaUserCircle size={30} color="#00c9ff" />
+        </li>
       </ul>
     </nav>
   );

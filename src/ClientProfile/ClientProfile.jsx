@@ -6,9 +6,9 @@ import {
   FaPhoneAlt,
   FaEnvelope,
   FaMapMarkerAlt,
-  FaFileImage,
   FaBell,
-  FaUserCircle
+  FaUserCircle,
+  FaBars, FaTimes
 } from "react-icons/fa";
 import c from '../signupPage/logo.jpg'
 import { baseBookURL } from "../axios";
@@ -22,6 +22,7 @@ const ClientProfile = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [errors, setErrors] = useState({});
   const clientId = localStorage.getItem('clientId')
+  const [menuOpen, setMenuOpen] = useState(false);
   const keyMap = {
   name: "Name",
   age: "Age",
