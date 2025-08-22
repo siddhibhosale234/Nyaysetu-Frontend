@@ -1,5 +1,5 @@
 import { HomeLaw } from "../Nyaysetu/Home";
-import { FaCalendarAlt, FaFolderOpen, FaUserCheck, FaEnvelope, FaBell } from "react-icons/fa";
+import { FaCalendarAlt, FaFolderOpen, FaUserCheck, FaEnvelope, FaBell, FaBalanceScale } from "react-icons/fa";
 import {useNavigate} from 'react-router-dom'
 function HomeProp() {
   const navigate = useNavigate();
@@ -37,11 +37,11 @@ function HomeProp() {
       }
     },
     {
-      Icon: <FaEnvelope size={40} />,
-      Title: "Messages",
-      Short_Info: "Check and respond to client messages.",
+      Icon: <FaBalanceScale size={40} />,
+      Title: "Cases In Court",
+      Short_Info: "Access and track your active court cases in real time.",
       onClick : ()=>{
-        navigate('/messages')
+        window.open("https://ecourts.gov.in/ecourts_home/index.php?p=dist_court/")
       }
     },
   ];
