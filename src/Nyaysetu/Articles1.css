@@ -44,3 +44,55 @@
   text-decoration: underline;
   color: #4dd0e1;
 }
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .article-card {
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  .article-card h3 {
+    font-size: 1rem;
+  }
+
+  .article-date,
+  .article-tag {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .article-card {
+    padding: 14px;
+    margin-bottom: 16px;
+  }
+
+  .article-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .read-more {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .article-card {
+    padding: 12px;
+    margin-bottom: 14px;
+    border-radius: 12px;
+  }
+
+  .article-card h3 {
+    font-size: 0.9rem;
+  }
+
+  .article-date,
+  .article-tag {
+    font-size: 0.8rem;
+  }
+
+  .read-more {
+    font-size: 0.85rem;
+  }
+}

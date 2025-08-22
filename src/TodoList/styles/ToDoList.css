@@ -138,3 +138,100 @@
     transform: translateY(-30px) scale(1.1);
   }
 }
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .todo-card {
+    max-width: 380px;
+    padding: 30px 25px;
+  }
+
+  #h2 {
+    font-size: 22px;
+  }
+
+  .input-wrapper input {
+    font-size: 13px;
+    padding: 11px;
+  }
+
+  .input-wrapper button {
+    font-size: 15px;
+    padding: 11px 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .todo-bg {
+    padding: 1rem;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .todo-card {
+    width: 90%;
+    padding: 25px 20px;
+  }
+
+  #h2 {
+    font-size: 20px;
+  }
+
+  #ul {
+    max-height: 250px;
+  }
+
+  #li {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .input-wrapper input {
+    font-size: 13px;
+  }
+
+  .input-wrapper button {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .todo-card {
+    width: 95%;
+    padding: 20px 15px;
+    border-radius: 14px;
+  }
+
+  #h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .input-wrapper {
+    flex-direction: column;
+  }
+
+  .input-wrapper input {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .input-wrapper button {
+    width: 100%;
+    border-radius: 8px;
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  #li {
+    font-size: 13px;
+    padding: 9px;
+  }
+
+  .actions svg {
+    margin-left: 8px;
+  }
+}

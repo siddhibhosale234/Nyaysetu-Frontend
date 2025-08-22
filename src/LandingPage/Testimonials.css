@@ -67,3 +67,63 @@
 .carousel-controls button:hover {
   background: rgba(255, 255, 255, 0.2);
 }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .testimonials-section h2 {
+    font-size: 2rem;
+  }
+
+  .testimonial-card {
+    padding: 30px 20px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 60px 15px;
+  }
+
+  .testimonials-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .testimonial-card {
+    padding: 25px 18px;
+    font-size: 1rem;
+  }
+
+  .carousel-controls button {
+    padding: 8px 12px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials-section {
+    padding: 50px 10px;
+  }
+
+  .testimonials-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .testimonial-card {
+    padding: 20px 15px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .testimonial-card span {
+    font-size: 0.9rem;
+  }
+
+  .carousel-controls button {
+    padding: 6px 10px;
+    margin: 0 5px;
+    font-size: 1rem;
+  }
+}

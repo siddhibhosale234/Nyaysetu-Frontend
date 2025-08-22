@@ -1,21 +1,22 @@
-.about-body{
-  height: 120vh;
-  width: 100vw;
+.about-body {
+  min-height: 100vh;  /* fills screen but grows if needed */
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #bbcad9;
+  padding: 2rem 0; /* gives breathing space */
 }
+
 .about-container {
-  height: 105vh;
+  min-height: 80vh;   /* enough room but flexible */
   width: 80vw;
-  margin: 3rem auto;
+  margin: 2rem auto;
   padding: 2rem 1.5rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #fefefe;
-   background: rgba(5, 30, 66, 0.6); 
+  background: rgba(5, 30, 66, 0.6);
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(5, 30, 66, 0.15);
   backdrop-filter: blur(20px);
 }
 
@@ -41,8 +42,7 @@
 }
 .about-section {
   margin-bottom: 2.5rem;
-  opacity: 0; /* or in .slide-in */
-  /* common padding maybe */
+  opacity: 0; 
 }
 
 .about-sectionr {
@@ -109,4 +109,79 @@
 }
 .about-heading:hover::after{
   width: 200px;
+}
+/* 📱 Small Mobiles (up to 480px) */
+@media (max-width: 480px) {
+  .about-container {
+    width: 95vw;
+    padding: 1.2rem;
+  }
+
+  .about-heading {
+    font-size: 1.8rem;
+  }
+
+  .about-sectionl,
+  .about-sectionr {
+    border: none; /* remove side borders for readability */
+    padding: 0;
+  }
+
+  .about-content {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+}
+
+/* 📲 Tablets (481px to 768px) */
+@media (max-width: 768px) {
+  .about-container {
+    width: 90vw;
+    padding: 1.5rem;
+  }
+
+  .about-heading {
+    font-size: 2.2rem;
+  }
+
+  .about-sectionl,
+  .about-sectionr {
+    border-width: 3px; /* thinner border */
+    padding: 0.5rem;
+  }
+
+  .about-content {
+    font-size: 1rem;
+  }
+}
+
+/* 💻 Medium to Large Screens (769px to 1200px) */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .about-container {
+    width: 85vw;
+  }
+
+  .about-heading {
+    font-size: 2.5rem;
+  }
+
+  .about-content {
+    font-size: 1.05rem;
+  }
+}
+
+/* 🖥️ Extra Large Screens (1201px and up) */
+@media (min-width: 1201px) {
+  .about-container {
+    width: 70vw;
+    padding: 3rem;
+  }
+
+  .about-heading {
+    font-size: 3rem;
+  }
+
+  .about-content {
+    font-size: 1.2rem;
+  }
 }

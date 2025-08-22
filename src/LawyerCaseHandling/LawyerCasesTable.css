@@ -153,3 +153,60 @@ tr.closed-row {
   color: #26293d;
 }
 
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .case-wrapper {
+    width: 90%;
+    padding: 15px 20px;
+  }
+
+  .title1 {
+    font-size: 20px;
+  }
+
+  .add-case-form input,
+  .add-case-form button {
+    font-size: 13px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .add-case-form {
+    flex-direction: column;
+  }
+
+  .add-case-form input,
+  .add-case-form button {
+    width: 100%;
+  }
+
+  .case-table th,
+  .case-table td {
+    font-size: 13px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo1 {
+    height: 45px;
+  }
+
+  .title1 {
+    font-size: 18px;
+  }
+
+  .case-wrapper {
+    padding: 12px 15px;
+  }
+
+  .case-table {
+    font-size: 12px;
+  }
+
+  .case-table th,
+  .case-table td {
+    padding: 8px;
+  }
+}

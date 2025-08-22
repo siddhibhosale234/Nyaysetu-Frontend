@@ -107,6 +107,31 @@
   }
 }
 
+/* Responsive CTA Button */
+@media (max-width: 1024px) {
+  .cta-button {
+    width: 25%;
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-button {
+    width: 40%;
+    font-size: 0.95rem;
+    padding: 10px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-button {
+    width: 50%;
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+}
+
 
 
 

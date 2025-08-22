@@ -16,20 +16,30 @@
 }
 
 .articles-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
   gap: 20px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .articles-container {
-    column-count: 2;
+    grid-template-columns: repeat(2, 1fr); /* large tablets/smaller laptops */
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .articles-container {
-    column-count: 1;
+    grid-template-columns: 1fr; /* tablets and below */
+  }
+}
+
+@media (max-width: 480px) {
+  .articles-heading {
+    font-size: 2rem; /* smaller heading for mobiles */
+  }
+  
+  .articles-section {
+    padding: 20px; /* reduce padding for small screens */
   }
 }
 

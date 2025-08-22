@@ -207,3 +207,79 @@ animation: gradientFlow 10s ease infinite;
   width: 60px;
 }
 
+/* ✅ Responsive for Case Studies & Header */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .case-card {
+    width: 260px;
+    padding: 24px;
+  }
+}
+
+/* Small Tablets / Large Phones */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 30px 10px;
+    min-height: 200px;
+  }
+
+  .logo-text {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+
+  .ashoka {
+    width: 80px;
+  }
+
+  .sanskrit-text {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .case-cards {
+    gap: 20px;
+  }
+
+  .case-card {
+    width: 100%; /* take full width */
+    max-width: 400px;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  .logo-bold,
+  .logo-light {
+    font-size: 2.2rem;
+  }
+
+  .ashoka {
+    width: 60px;
+  }
+
+  .sanskrit-text {
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .case-card {
+    padding: 20px;
+    font-size: 0.9rem;
+    width: 100%;
+  }
+}

@@ -136,3 +136,89 @@ button:hover {
   justify-content: center;
 }
 
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .form-container1 {
+    max-width: 380px;
+    padding: 30px 25px;
+    height: auto;
+  }
+
+  .signup-form h2 {
+    font-size: 20px;
+  }
+
+  .input-wrapper input {
+    font-size: 13px;
+    padding: 11px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 11px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Background2 {
+    padding: 1rem;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .form-container1 {
+    width: 90%;
+    padding: 25px 20px;
+    height: auto;
+  }
+
+  .logoimg {
+    height: 60px;
+    width: 60px;
+  }
+
+  .signup-form h2 {
+    font-size: 18px;
+  }
+
+  .login-text,
+  .link-button {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container1 {
+    width: 95%;
+    padding: 20px 15px;
+    border-radius: 14px;
+  }
+
+  .logoimg {
+    height: 55px;
+    width: 55px;
+    margin-bottom: 15px;
+  }
+
+  .signup-form h2 {
+    font-size: 16px;
+    margin-bottom: 18px;
+  }
+
+  .input-wrapper input {
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  button {
+    font-size: 13px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .login-text,
+  .link-button {
+    font-size: 12px;
+  }
+}

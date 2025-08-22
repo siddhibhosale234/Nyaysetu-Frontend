@@ -133,15 +133,7 @@
   font-style: italic;
 }
 
-/* Case and Document Layout */
-.case-docs-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.case-desc,
-.shared-docs {
+.case-desc {
   flex: 1;
   min-width: 300px;
   background-color: white;
@@ -155,63 +147,6 @@
   padding: 12px;
   border-radius: 10px;
   margin-top: 10px;
-}
-
-.shared-docs ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.shared-docs li {
-  background-color: #f5f5f5;
-  padding: 10px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-/* Notification Box */
-.notification {
-  text-align: center;
-  background-color: white;
-  padding: 12px 20px;
-  border-radius: 10px;
-  margin-top: 30px;
-  border: 1px dashed #ccc;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.notification:hover {
-  background-color: #f0f0f0;
-}
-
-.notification-content {
-  margin-top: 10px;
-  text-align: left;
-  background: #f9f9f9;
-  padding: 10px 16px;
-  border-radius: 8px;
-  max-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 14px;
-  color: #333;
-}
-
-.notification-content ul {
-  padding-left: 20px;
-}
-
-.notification-content li {
-  margin-bottom: 8px;
 }
 
 /* Modal Overlay */
@@ -368,9 +303,6 @@
     margin-top: 10px;
   }
 
-  .case-docs-container {
-    flex-direction: column;
-  }
 }
 
 @media (max-width: 768px) {
@@ -392,14 +324,8 @@
     height: 100px;
   }
 
-  .case-desc,
-  .shared-docs {
+  .case-desc {
     padding: 18px;
-  }
-
-  .notification-content {
-    max-width: 90%;
-    font-size: 13px;
   }
 
   .edit-modal {
@@ -436,9 +362,99 @@
     margin-bottom: 8px;
   }
 
-  .notification {
+  .edit-modal {
+    max-width: 95%;
+    padding: 15px;
+  }
+}
+/* 🌐 Responsive Design */
+@media (max-width: 1024px) {
+  .client-container {
+    padding: 15px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nav-links {
+    margin-top: 10px;
+  }
+
+  .profile-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-details {
+    align-items: center;
+  }
+
+  .profile-actions {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 20px;
+    border-radius: 8px;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .profile-box {
+    padding: 18px;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .case-desc {
+    padding: 18px;
+  }
+
+  .edit-modal {
+    max-width: 90%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .profile-box {
+    gap: 12px;
+  }
+
+  .profile-details h2 {
+    font-size: 1.2rem;
+  }
+
+  .edit-btn,
+  .reset-btn {
     width: 100%;
-    font-size: 14px;
+    margin-bottom: 8px;
   }
 
   .edit-modal {

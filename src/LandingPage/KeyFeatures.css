@@ -34,3 +34,41 @@
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
 }
 
+/* ✅ Responsive part */
+@media (max-width: 1024px) {
+  .features-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .feature-card {
+    padding: 20px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    gap: 20px;
+  }
+
+  .features-section h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .features-grid {
+    grid-template-columns: 1fr; /* 1 column */
+  }
+
+  .feature-card {
+    padding: 18px;
+    font-size: 0.95rem;
+  }
+
+  .features-section h2 {
+    font-size: 1.4rem;
+  }
+}

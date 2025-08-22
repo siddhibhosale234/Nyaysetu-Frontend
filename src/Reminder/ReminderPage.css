@@ -116,3 +116,84 @@
 .reminder-container input::placeholder{
   color: white;
 }
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .reminder-container {
+    width: 85vw;
+    height: 75vh;
+    padding: 20px;
+  }
+
+  .reminder-input,
+  .reminder-datepicker,
+  .react-datepicker__input-container input {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .reminder-body {
+    padding: 1rem;
+  }
+
+  .reminder-container {
+    width: 90vw;
+    height: auto;
+    max-height: 80vh;
+    padding: 20px;
+    overflow-y: auto;
+  }
+
+  .reminder-input,
+  .reminder-datepicker,
+  .react-datepicker__input-container input {
+    width: 100%;
+  }
+
+  .reminder-form {
+    gap: 15px;
+  }
+
+  .reminder-button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .reminder-list {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .reminder-container {
+    padding: 15px;
+    border-radius: 14px;
+  }
+
+  .reminder-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .reminder-container h3 {
+    font-size: 1.2rem;
+  }
+
+  .reminder-input,
+  .reminder-datepicker,
+  .react-datepicker__input-container input {
+    font-size: 0.95rem;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .reminder-button {
+    font-size: 0.95rem;
+    padding: 8px;
+    border-radius: 20px;
+  }
+
+  .reminder-list {
+    font-size: 0.95rem;
+  }
+}

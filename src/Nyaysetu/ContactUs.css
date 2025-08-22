@@ -74,3 +74,61 @@
 .contactus-button:hover {
   background-color: #32bffb;
 }
+/* 📱 Responsive Design */
+@media (max-width: 1024px) {
+  .contactus-container {
+    width: 80vw;
+    padding: 20px;
+  }
+
+  .contactus-input,
+  .contactus-textarea {
+    width: 90%;
+  }
+
+  .contactus-button {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactus-container {
+    width: 90vw;
+    padding: 15px;
+  }
+
+  .contactus-input,
+  .contactus-textarea {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .contactus-button {
+    width: 70%;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactus-container {
+    width: 95vw;
+    padding: 12px;
+  }
+
+  .contactus-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .contactus-input,
+  .contactus-textarea {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .contactus-button {
+    width: 80%;
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+}

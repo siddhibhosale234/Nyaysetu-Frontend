@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Navbar.css';
 import logo from './NyaysetuLogo.png';
@@ -5,6 +6,8 @@ import { FaUserCircle, FaBell } from 'react-icons/fa';
 
 export function NavbarLaw() {
   const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <nav className="navbarLaw">
       <div className="titleLogoLaw">
@@ -12,7 +15,8 @@ export function NavbarLaw() {
         <h1>NYAYSETU</h1>
       </div>
 
-      <div className="listLaw">
+      {/* Navigation list */}
+      <div className={`listLaw ${menuOpen ? 'show' : ''}`}>
         <ul>
           <li><a href='/lawyerhome'>Home</a></li>
           <li><a href="/activecases">My Cases</a></li>
@@ -22,20 +26,25 @@ export function NavbarLaw() {
         </ul>
       </div>
 
+      {/* Icons */}
       <div className="navbar-iconsLaw">
-        <div className="notificationsLaw" onClick={()=>{navigate('/reminders?role=lawyer')}}>
+        <div className="notificationsLaw" onClick={() => { navigate('/reminders?role=lawyer') }}>
           <FaBell size={20} color="#00c9ff" />
         </div>
-        <div className="profileLaw" onClick={()=>{navigate('/profile')}}>
+        <div className="profileLaw" onClick={() => { navigate('/profile') }}>
           <FaUserCircle size={30} color="#00c9ff" />
         </div>
       </div>
-      <div class="toggle-btnLaw" onclick="document.querySelector('.listLaw').classList.toggle('active'); this.classList.toggle('active');">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
 
+      {/* Hamburger toggle */}
+      <div
+        className={`toggle-btnLaw ${menuOpen ? 'active' : ''}`}
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
   );
 }

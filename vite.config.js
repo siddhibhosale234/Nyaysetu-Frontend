@@ -8,7 +8,7 @@ export default defineConfig({
     port: 5173, // optional, default is 5173
     proxy: {
       '/api': {
-        target: 'http://localhost:5000', // your backend server
+        target: 'https://nyaysetu-backend-2y0e.onrender.com', // your backend server
         changeOrigin: true,
         secure: false,
       },

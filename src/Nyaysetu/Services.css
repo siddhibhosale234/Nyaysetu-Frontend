@@ -120,3 +120,69 @@
     transform: translateY(0);
   }
 }
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .ourservice-glass h1 {
+    font-size: 2.5rem;
+  }
+  .ourservice-desc {
+    font-size: 1rem;
+  }
+  .practice-heading {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ourservice-hero {
+    height: auto;
+    padding: 4rem 1.5rem;
+  }
+  .ourservice-glass {
+    padding: 2rem 1.5rem;
+  }
+  .ourservice-glass h1 {
+    font-size: 2rem;
+  }
+  .ourservice-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .practice-heading {
+    font-size: 1.8rem;
+  }
+  .practice-tile img {
+    height: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ourservice-hero {
+    padding: 3rem 1rem;
+  }
+  .ourservice-glass {
+    padding: 1.5rem;
+    border-radius: 14px;
+  }
+  .ourservice-glass h1 {
+    font-size: 1.6rem;
+  }
+  .ourservice-desc {
+    font-size: 0.95rem;
+  }
+  .practice-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .practice-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .practice-tile img {
+    height: 120px;
+  }
+  .practice-tile h3 {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+}

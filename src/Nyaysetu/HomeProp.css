@@ -6,3 +6,29 @@
     padding-top: 3%;
     padding-bottom: 5%;
 }
+/* Responsive Styling for container3 */
+@media (max-width: 1024px) {
+  .container3 {
+    gap: 3%;
+    padding-top: 4%;
+    padding-bottom: 6%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container3 {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 5%;
+    padding-bottom: 8%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container3 {
+    width: 100%;
+    gap: 15px;
+    padding: 6% 5%;
+  }
+}

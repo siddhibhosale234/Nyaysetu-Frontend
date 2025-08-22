@@ -63,4 +63,47 @@
   }
 }
 
+/* Responsive PopUp */
+@media (max-width: 768px) {
+  .popUp {
+    max-width: 95%;
+    padding: 1.5rem;
+    transform: translate(-50%, -60%); /* closer to center */
+  }
+
+  .popUp h1 {
+    font-size: 1.5rem;
+  }
+
+  .popUp h3 {
+    font-size: 1rem;
+  }
+
+  .popUp button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .popUp {
+    max-width: 90%;
+    padding: 1rem;
+    transform: translate(-50%, -50%); /* perfect center */
+  }
+
+  .popUp h1 {
+    font-size: 1.2rem;
+  }
+
+  .popUp h3 {
+    font-size: 0.9rem;
+  }
+
+  .popUp button {
+    width: 100%; /* full width button */
+    font-size: 0.9rem;
+  }
+}
+
 

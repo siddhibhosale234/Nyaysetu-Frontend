@@ -48,3 +48,48 @@
   height: 60px;
   margin-bottom: 1rem;
 }
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .specialization-grid {
+    gap: 1.5rem;
+  }
+  .profile-card {
+    width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .lawyer-specializations h2 {
+    font-size: 1.6rem;
+  }
+  .specialization-grid {
+    gap: 1rem;
+  }
+  .profile-card {
+    width: 160px;
+    padding: 0.8rem;
+  }
+  .profile-card img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lawyer-specializations {
+    padding: 1rem;
+    margin: 1rem;
+  }
+  .lawyer-specializations h2 {
+    font-size: 1.3rem;
+  }
+  .specialization-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .profile-card {
+    width: 90%;
+    max-width: 280px;
+  }
+}
