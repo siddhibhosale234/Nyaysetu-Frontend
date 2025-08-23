@@ -80,10 +80,21 @@ export function Login(){
 };
 
 
-  const handleForgot = (e) => {
+  const handleForgot = async(e) => {
     e.preventDefault();
-    
-    console.log("Reset password for:", forgotEmail);
+    try{
+    const {data} = await baseBookURL.post('/forgotPassword/addForgotPassword',{Email:forgotEmail,Role: role})
+    if(data?.Success){
+      alert(data?.Message)
+    }
+    else{
+      alert('Some error occurred')
+    }
+  }
+  catch(error){
+    alert('Check Log')
+    console.log(error);
+  }
   };
 
   return (
