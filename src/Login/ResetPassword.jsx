@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { baseBookURL } from "../axios";
+import './ResetPassword.css';
 
 export function ResetPassword() {
   const [searchParams] = useSearchParams();
@@ -49,24 +50,32 @@ export function ResetPassword() {
   };
 
   return (
-    <div>
-      <h2>Reset Password</h2>
-      <p>Email: {email}</p>
-      <p>Role: {role}</p>
-      {step === 1 ? (
-        <button onClick={handleVerify}>Verify Code</button>
-      ) : (
-        <form onSubmit={handleReset}>
-          <input
-            type="password"
-            placeholder="Enter new password"
-            value={newPassword}
-            onChange={(e) => setNewPassword(e.target.value)}
-            required
-          />
-          <button type="submit">Set Password</button>
-        </form>
-      )}
+    <div className="resetpass-body">
+      <div className="resetpass-container">
+        <h2 className="resetpass-title">Reset Password</h2>
+        <p className="resetpass-info">Email: {email}</p>
+        <p className="resetpass-info">Role: {role}</p>
+
+        {step === 1 ? (
+          <button className="resetpass-btn" onClick={handleVerify}>
+            Verify Code
+          </button>
+        ) : (
+          <form className="resetpass-form" onSubmit={handleReset}>
+            <input
+              type="password"
+              className="resetpass-input"
+              placeholder="Enter new password"
+              value={newPassword}
+              onChange={(e) => setNewPassword(e.target.value)}
+              required
+            />
+            <button type="submit" className="resetpass-btn">
+              Set Password
+            </button>
+          </form>
+        )}
+      </div>
     </div>
   );
 }
