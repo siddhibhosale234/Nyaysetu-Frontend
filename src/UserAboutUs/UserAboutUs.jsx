@@ -15,7 +15,7 @@ import { Autoplay } from "swiper/modules";  // ✅ Correct import for Swiper v10
 import { useNavigate } from "react-router-dom";
 
 const teamMembers = [
-  { name: "Siddhi Bhosale", role: "Professional Backend Developer, Concept Creator", img: null },
+  { name: "Siddhi Bhosale", role: "Professional Backend Developer, Frontend Developer, Concept Creator", img: null },
   { name: "Utkarsh Patil", role: "Professional Frontend Developer, Flow Manager", img: null },
   { name: "Tanvi Shrirame", role: "UI and Content Designer, Professional Frontend Developer", img: null },
   { name: "Samruddhi Kale", role: "UI Designer, Creative Designer", img: null },

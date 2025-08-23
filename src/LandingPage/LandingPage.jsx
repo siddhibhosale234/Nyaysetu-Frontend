@@ -21,13 +21,13 @@ const steps = [
   },
   {
     number: 2,
-    title: "Upload Documents",
-    desc: "Easily upload your legal documents through our secure system. All your files are encrypted and stored safely."
+    title: "Get Matched",
+    desc: "Our system analyzes your case and suggests you the most suitable legal expert for your issue."
   },
   {
     number: 3,
-    title: "Get Matched",
-    desc: "Our system analyzes your case and suggests you the most suitable legal expert for your issue."
+    title: "Have a Chat",
+    desc: "Connect directly with your matched lawyer to discuss your case and get clear guidance."
   },
   {
     number: 4,
