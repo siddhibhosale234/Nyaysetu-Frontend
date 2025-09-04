@@ -141,7 +141,7 @@
   padding: 24px;
   border-radius: 16px;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-  
+  color : black;
 }
 
 .case-desc p {
